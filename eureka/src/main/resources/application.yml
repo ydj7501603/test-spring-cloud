@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ydj-eureka-server
+
+server:
+  port: 6801
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
+    # 是否需要将自己注册到注册中心
+    register-with-eureka: false
+    # 是否需要搜索服务信息
+    fetch-registry: false
