@@ -20,9 +20,16 @@ public class QuickSort {
         quickSort(num, partition+1, right);
     }
 
-
+    /**
+     * 分组
+     * @param num
+     * @param left
+     * @param right
+     * @return
+     */
     public int partition(int[] num, int left, int right){
         if (left <= right) {
+            //基准数客户优化，三位数法（一头一尾一中间，取平均），随机法
             int temp = num[left];
             int i = left, j = right;
             while (i < j) {
@@ -49,7 +56,7 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] nums = {5,3,1,6,2};
+        int[] nums = {5,3,1,6,2,23,22,1,11};
         QuickSort quickSort = new QuickSort();
         quickSort.quickSort(nums, 0, nums.length - 1);
 
