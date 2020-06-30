@@ -27,9 +27,6 @@ public class TwoSum {
             }
             map.put(nums[i], i);
         }
-        LinkedHashMap linkedHashMap = null;
         return new int[]{};
-
-
     }
 }
